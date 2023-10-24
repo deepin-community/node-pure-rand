@@ -1,0 +1,3 @@
+ts-jest		test
+@types/assert	test
+@types/jest	test

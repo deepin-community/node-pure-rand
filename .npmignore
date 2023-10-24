@@ -1,0 +1,7 @@
+.nyc_output/
+coverage/
+example/
+perfs/
+src/
+test/
+buildTypes.js

@@ -1,0 +1,28 @@
+Description: tsc workaround
+ Package needs tsc 5
+Author: Yadd <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2023-05-29
+
+--- a/test/unit/distribution/internals/ArrayInt.spec.ts
++++ b/test/unit/distribution/internals/ArrayInt.spec.ts
+@@ -110,7 +110,9 @@
+           expect(arrayInt.data).toHaveLength(2);
+ 
+           const arrayIntHexaRepr =
++// @ts-ignore
+             arrayInt.data[0].toString(16).padStart(8, '0') + arrayInt.data[1].toString(16).padStart(8, '0');
++// @ts-ignore
+           const valueHexaRepr = Math.abs(value).toString(16).padStart(16, '0');
+           expect(arrayIntHexaRepr).toBe(valueHexaRepr);
+         })
+--- a/tsconfig.json
++++ b/tsconfig.json
+@@ -12,7 +12,6 @@
+     "moduleResolution": "node",
+     "module": "commonjs",
+     "target": "es3",
+-    "ignoreDeprecations": "5.0",
+     "lib": ["es6", "esnext.bigint"],
+     "outDir": "lib/"
+   },
