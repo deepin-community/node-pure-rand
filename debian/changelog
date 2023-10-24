@@ -1,5 +1,11 @@
-template-repository (1.0-1) unstable; urgency=medium
+node-pure-rand (6.0.2+ds1-2) unstable; urgency=medium
 
-  * Initial release
+  * Source-only upload
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Yadd <yadd@debian.org>  Sat, 19 Aug 2023 12:34:17 +0400
+
+node-pure-rand (6.0.2+ds1-1) unstable; urgency=medium
+
+  * Initial release (Closes: #1036903)
+
+ -- Yadd <yadd@debian.org>  Mon, 29 May 2023 10:42:16 +0400

@@ -1,4 +1,18 @@
 #!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
 
 %:
 	dh $@
+
+override_dh_auto_build:
+	tsc
+	tsc -p ./tsconfig.declaration.json
+	tsc --module es2015 --outDir lib/esm --moduleResolution node
+	cp package.esm-template.json lib/esm/package.json
+
+override_dh_installdocs:
+	dh_installdocs
+	dh_nodejs_autodocs

@@ -1,0 +1,15 @@
+# fast-check is missing
+jest --ci --no-coverage --testPathIgnorePatterns \
+	test/unit/distribution/UniformArrayIntDistribution.noreg.spec.ts \
+	test/unit/distribution/UniformArrayIntDistribution.spec.ts \
+	test/unit/distribution/UniformBigIntDistribution.spec.ts \
+	test/unit/distribution/UniformIntDistribution.noreg.spec.ts \
+	test/unit/distribution/UniformIntDistribution.spec.ts \
+	test/unit/distribution/internals/ArrayInt.spec.ts \
+	test/unit/distribution/internals/UnsafeUniformArrayIntDistributionInternal.spec.ts \
+	test/unit/distribution/internals/UnsafeUniformIntDistributionInternal.spec.ts \
+	test/unit/generator/LinearCongruencial.spec.ts \
+	test/unit/generator/MersenneTwister.spec.ts \
+	test/unit/generator/RandomGenerator.properties.ts \
+	test/unit/generator/XorShift.spec.ts \
+	test/unit/generator/XoroShiro.spec.ts

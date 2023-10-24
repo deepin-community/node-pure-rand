@@ -1,0 +1,17 @@
+coverage/
+lib/
+lib-*/
+node_modules/
+.nyc_output/
+out.txt
+v8.log
+v8.out
+
+# https://yarnpkg.com/advanced/qa#which-files-should-be-gitignored
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
